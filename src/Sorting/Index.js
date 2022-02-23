@@ -11,25 +11,11 @@ const Index = () => {
         }, {
             Header: 'Trips Amount',
             accessor: 'trips',
-            Cell: props => {
-                // return props.value == null ? 'No value' : props.value
-                return (
-                    <span style={{ color: props.value == null ? "red" : "black" }}>
-                        {props.value == null ? 'No value' : props.value}
-                    </span>
-                );
-            }
-            // Cell: props => {
-            //   return props.value == null ? (
-            //     <button>Click Me </button>
-            //   ) : (
-            //     <button disabled> No action </button>
-            //   );
-            // }
 
         }, {
             Header: 'Current Flight',
             accessor: 'airline[0].name',
+            disableSortBy: true //disabled sorting in this Header
 
         }
     ], []);
